@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Test Drive Journal</title>
+  <meta name="description" content="Digital Platforms Test Drive (ESSEC) — one tab per guest speaker session, each with key takeaways and an interactive game.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap header-inner">
+      <a href="#home" class="brand" aria-label="Home">
+        <span class="brand-mark">TD</span>
+        <span class="brand-text">
+          <strong>Test Drive Journal</strong>
+          <small id="brand-sub">Digital Platforms Test Drive · ESSEC</small>
+        </span>
+      </a>
+      <div class="progress-pill" id="progress-pill" title="Games completed">0 / 0 games</div>
+    </div>
+    <nav class="tabs wrap" id="tabs" aria-label="Sessions"></nav>
+  </header>
+
+  <main class="wrap" id="app" tabindex="-1"></main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <p id="footer-text"></p>
+    </div>
+  </footer>
+
+  <script src="script.js" defer></script>
+</body>
+</html>
