@@ -433,25 +433,430 @@ const SESSIONS = [
     ],
   },
 
-  /* ---------------- Upcoming sessions (from the syllabus) ---------------- */
   {
     id: "session-3",
-    status: "upcoming",
+    status: "done",
     guest: false,
-    short: "S3 · Trends & creators",
+    short: "S3 · Media buying & objectives",
     number: "Session 3",
-    title: "Campaign Objectives, Trends, Live Selling & Influencer Strategies",
-    lead: "Short-form video ad formats, viral content, live selling and influencer engagement models.",
+    date: "23 Oct 2026",
+    title: "Media Buying, Media Agencies & Campaign Objectives",
+    speakers: [{ name: "Madina Kalyayeva", role: "Lecturer" }],
+    lead:
+      "Why organic reach alone is not enough, what media agencies still do when platforms automate the buy, how to pick the right Meta campaign objective, and the brief for our final omni-channel group project.",
+    stats: [
+      { value: "US$338.75B", label: "social media ad spend worldwide in 2026 (Statista)" },
+      { value: "3–5%", label: "of Instagram followers see an organic post (~1% on Facebook)" },
+      { value: "US$588M", label: "social ad spend in Singapore in 2025 (+15.2%)" },
+      { value: "6", label: "Meta campaign objectives, from Awareness to Sales" },
+    ],
+    takeaways: [
+      {
+        title: "Organic vs paid: you need both",
+        points: [
+          "Organic = unpaid posts, stories, UGC and employee advocacy. It builds the relationship and the brand voice, but reaches only a small share of followers.",
+          "Paid = “renting premium ad space”: boosted posts, targeted campaigns, creator partnership ads (Spark Ads, Meta partnership ads) and AI-automated campaigns (Advantage+, Smart+, Performance Max).",
+          "Paid only works while you keep paying, can feel less authentic, and AI automation can be a black box: the platform decides where the money goes, so you need your own measurement.",
+          "The winning agency strategy combines paid reach with organic engagement.",
+        ],
+      },
+      {
+        title: "AI + human media buyers",
+        points: [
+          "AI can now build, buy and optimise whole campaigns, but it lacks context, strategy and cultural nuance.",
+          "Bad data = bad recommendations. Platform AI optimises for the platform's own metrics; humans check what really drove incremental sales.",
+          "Creativity and consumer psychology (stories, emotional triggers, reacting to real-world events) stay human.",
+          "Best formula: AI for efficiency + human expertise for judgement and constant optimisation.",
+        ],
+      },
+      {
+        title: "Media agencies in 2026",
+        points: [
+          "Core jobs: strategy & planning, ad buying & bidding, optimisation & tracking, creative execution.",
+          "Why brands still use them: expertise, better pricing and premium inventory, their own data and AI tools, and time saved.",
+          "Big changes: Omnicom completed its IPG acquisition (Nov 2025, ~US$26B revenue); GroupM became WPP Media (May 2025); agencies run their own AI platforms (WPP Open, Publicis Marcel, Omnicom Omni).",
+          "As Meta, Google and TikTok automate the buy, agencies move to strategy, data, creative and measurement. Even ChatGPT Ads in SEA are sold through the big agency groups.",
+        ],
+      },
+      {
+        title: "Choosing the right Meta objective",
+        points: [
+          "The objective decides how Meta's algorithm optimises delivery, who sees the ad and how performance is measured.",
+          "Top of funnel: Awareness (brand awareness, reach). Middle: Traffic, Engagement, Leads. Bottom: App promotion, Sales.",
+          "Choose by funnel stage, business goal, and ad format & budget, then test: multiple creatives and audiences, CTR, CPA, ROAS, A/B tests on the CTA.",
+          "Common mistakes: wrong objective, no continuous optimisation, no custom or lookalike audiences, no clear CTA.",
+        ],
+      },
+      {
+        title: "Final project: the omni-channel campaign",
+        points: [
+          "Create a digital campaign for a hypothetical new product of a real brand (e.g. Dyson launches speakers).",
+          "At least 2 platforms + at least 1 AI component, with the human decisions around it explained (research, creative, buying, GEO check, measurement or disclosure).",
+          "Include: SMART objective, personas, content types, messaging, KPIs per funnel stage, a US$100,000 budget split (keep 10–15% for test-and-learn) and a 3-month timeline.",
+          "20-minute group pitch + 5 minutes Q&A in December; 50% of the grade.",
+        ],
+      },
+    ],
+    reflection:
+      "The idea I keep coming back to is that the objective is not a box to tick in Ads Manager: it tells the algorithm what to look for. Pick the wrong one and the AI will optimise very efficiently for the wrong result. That is also why agencies are not disappearing: when the platform does the buying, the value moves to choosing the goal, checking the data and proving what actually worked.",
+    games: [
+      {
+        type: "sort",
+        title: "Pick the Meta objective",
+        intro: "Examples from the Session 3 slides. Tap a situation, then tap the campaign objective that fits it best.",
+        buckets: [
+          { id: "aw", name: "Awareness", desc: "Top of funnel" },
+          { id: "tr", name: "Traffic", desc: "Send people somewhere" },
+          { id: "en", name: "Engagement", desc: "Interactions" },
+          { id: "le", name: "Leads", desc: "Collect contact info" },
+          { id: "ap", name: "App promotion", desc: "Installs & app actions" },
+          { id: "sa", name: "Sales", desc: "Purchases" },
+        ],
+        items: [
+          { label: "Graff keeps a new jewellery collection top-of-mind with high-value audiences", bucket: "aw" },
+          { label: "Oppo wants maximum visibility before its launch event", bucket: "aw" },
+          { label: "Club21 drives shoppers to its website during a sale", bucket: "tr" },
+          { label: "Only count people who actually load the landing page", bucket: "tr" },
+          { label: "A wellness influencer wants more shares on a workout video", bucket: "en" },
+          { label: "Boost RSVPs for an event", bucket: "en" },
+          { label: "Elemis collects enquiries with an instant form", bucket: "le" },
+          { label: "An app like Strip attracts new users and downloads", bucket: "ap" },
+          { label: "A multi-brand store shows a private catalogue sale to past customers", bucket: "sa" },
+          { label: "Drive foot traffic to a physical store", bucket: "sa" },
+        ],
+      },
+      {
+        type: "quiz",
+        title: "Paid, organic & agencies",
+        intro: "Six questions on Session 3.",
+        questions: [
+          {
+            q: "In 2026, roughly what share of Instagram followers see a brand's organic post?",
+            options: ["About 25%", "About 10–15%", "About 3–5%", "Less than 0.1%"],
+            answer: 2,
+            why: "Organic reach is around 3–5% on Instagram and about 1% on Facebook, which is why paid media is needed to scale.",
+          },
+          {
+            q: "What is the main risk of AI-automated campaigns like Advantage+ or Performance Max?",
+            options: [
+              "They cannot run video ads",
+              "They are a black box, so you need your own measurement",
+              "They only work for B2B brands",
+              "They are always more expensive than manual campaigns",
+            ],
+            answer: 1,
+            why: "The platform decides where the money goes and optimises for its own metrics, so you need independent proof of what worked.",
+          },
+          {
+            q: "Which deal created the world's largest marketing holding company in November 2025?",
+            options: ["WPP + Publicis", "Omnicom + IPG", "Dentsu + Havas", "Meta + Google"],
+            answer: 1,
+            why: "Omnicom completed its acquisition of IPG, reaching about US$26B in revenue.",
+          },
+          {
+            q: "What is GroupM called since May 2025?",
+            options: ["WPP Media", "Publicis Marcel", "Omnicom Omni", "Havas Converged"],
+            answer: 0,
+            why: "GroupM became WPP Media; its agencies now run on the WPP Open AI platform.",
+          },
+          {
+            q: "A B2B software company wants qualified prospects to contact. Which objective fits best?",
+            options: ["Awareness", "Engagement", "Leads", "App promotion"],
+            answer: 2,
+            why: "The slides use exactly this example: B2B software prioritises Leads, e-commerce prioritises Sales.",
+          },
+          {
+            q: "In the final project, how much of the US$100,000 budget should be kept as a test-and-learn reserve?",
+            options: ["0%", "10–15%", "30–40%", "50%"],
+            answer: 1,
+            why: "The brief asks for a 10–15% reserve to test and then move money to what performs.",
+          },
+        ],
+      },
+    ],
   },
+
   {
     id: "session-4",
-    status: "upcoming",
-    guest: true,
-    short: "S4 · Meta / Agency",
+    status: "done",
+    guest: false,
+    short: "S4 · Media teams & the brief",
     number: "Session 4",
-    title: "The Role of Media Agencies: Meta's Visual Ad Formats & AI",
-    lead: "Lecture + platform demo by an agency representative: storytelling and engagement on Meta.",
+    date: "30 Oct 2026",
+    title: "Managing Media Campaigns: the Media Team, the Brief & AI Agents",
+    speakers: [{ name: "Madina Kalyayeva", role: "Lecturer" }],
+    lead:
+      "Who does what in a media team and how AI changes each role, why the brief is the most important document of a campaign, and a real agency proposal: M&C Saatchi's B2B campaign for WWF Singapore, down to the media plan.",
+    stats: [
+      { value: "5", label: "core roles: strategist, buyer, trader, analyst, manager" },
+      { value: "+1,587%", label: "job posts asking for “AI agent” skills in 2025 (Randstad)" },
+      { value: "94%", label: "of B2B buyers use AI chatbots in their buying journey (Forrester)" },
+      { value: "15%", label: "media handling fee on top of media spend in the WWF plan" },
+    ],
+    takeaways: [
+      {
+        title: "The media team and how AI changes it",
+        points: [
+          "Strategist: chooses channels, budgets and tactics. Uses AI for research and scenarios but still owns the objective and the big idea.",
+          "Buyer & trader: less manual bidding, more setting goals, budgets, data and guardrails for Advantage+, Performance Max, Smart+ and LinkedIn Accelerate.",
+          "Analyst: moves from platform reports to incrementality tests and marketing-mix models (Google Meridian, Meta Robyn).",
+          "Manager: runs timelines, budgets and stakeholders, and now adds AI governance (where AI may be used, disclosure, brand safety, data privacy).",
+          "New roles: creative-automation specialists, data engineers and measurement leads.",
+        ],
+      },
+      {
+        title: "The brief is the most important document",
+        points: [
+          "It sets the objectives, budget, dates, target audience and business KPIs, so the brand, media buyers, planners and creatives all work towards the same goal.",
+          "If the brief is unclear, or the agency spots an opportunity outside it, answer with a reverse brief to confirm objectives with the client.",
+          "In the AI era, add: available first-party data and conversion signals (Pixel, Conversions API, CRM), how much creative the AI needs to test, the measurement plan, and AI rules (approval, disclosure, Singapore's PDPA).",
+          "New touchpoints to brief for: ChatGPT Ads (Singapore since Sep 2026) and ads in Google AI Overviews (Singapore since Dec 2025).",
+          "Use AI to stress-test the brief for gaps and risks, but AI drafts, humans decide.",
+        ],
+      },
+      {
+        title: "Case: WWF Singapore × M&C Saatchi",
+        points: [
+          "Brief: promote “Together Possible @ Work”, WWF's employee-engagement and workplace-giving programmes, to companies in Singapore.",
+          "Audience: 30–50-year-old decision makers (C-level, HR directors) looking for ways to raise productivity and wellbeing.",
+          "Insights: employees choose purpose and wellbeing over money, while companies still treat CSR and team building as extras.",
+          "Direction “Together we lead with purpose”, creative line “Purpose is ours to create”, with brand-led, product-led and consumer-led messaging pillars.",
+          "Organic posts document real workshops and impact (e.g. 250 solar lights built in 2 hours); sponsored posts use a provocative contrast, lead-gen forms and LinkedIn conversation ads.",
+        ],
+      },
+      {
+        title: "Reading a media plan",
+        points: [
+          "12 weeks on Meta, LinkedIn and Google Search: US$22,217 of media, US$25,550 with the 15% handling fee.",
+          "Planned costs: US$0.90 per Meta click, US$10 per Meta lead, US$60 per LinkedIn lead, US$50 per LinkedIn conversation, US$8 per Google search lead.",
+          "Meta leads are cheaper but often less qualified than LinkedIn leads, so the plan tests US$3k on each, then shifts the rest to the better performer.",
+          "B2B in 2026: about 13 internal stakeholders and 9 external influencers per purchase, procurement decides in 53% of cases, and buyers still double-check AI answers with people.",
+        ],
+      },
+    ],
+    reflection:
+      "The WWF media plan was the most useful part for me, because it shows that a plan is a set of assumptions to test, not a final answer. The cheapest lead is not always the best lead, so the agency builds the A/B test into the budget. For our group project, I want to write the brief first, ask an AI to find its gaps, and decide ourselves what to change.",
+    games: [
+      {
+        type: "sort",
+        title: "Who does it?",
+        intro: "Tap a task, then tap the media-team role it belongs to.",
+        buckets: [
+          { id: "st", name: "Strategist", desc: "Plan & big idea" },
+          { id: "bu", name: "Buyer", desc: "Negotiates & buys" },
+          { id: "tr", name: "Trader", desc: "Programmatic, real time" },
+          { id: "an", name: "Analyst", desc: "Performance & proof" },
+          { id: "ma", name: "Manager", desc: "Execution & governance" },
+        ],
+        items: [
+          { label: "Decides the best channels and budget split", bucket: "st" },
+          { label: "Owns the big idea, using AI only for research", bucket: "st" },
+          { label: "Negotiates and purchases ad placements", bucket: "bu" },
+          { label: "Optimises programmatic bids and placements in real time", bucket: "tr" },
+          { label: "Tracks performance and recommends optimisations", bucket: "an" },
+          { label: "Runs incrementality tests and marketing-mix models", bucket: "an" },
+          { label: "Keeps timelines, budgets and deliverables on track", bucket: "ma" },
+          { label: "Sets the AI rules: disclosure, brand safety, data privacy", bucket: "ma" },
+        ],
+      },
+      {
+        type: "quiz",
+        title: "The brief & the WWF case",
+        intro: "Six questions on Session 4.",
+        questions: [
+          {
+            q: "The client's brief is unclear. What should the agency do?",
+            options: ["Start buying media anyway", "Send a reverse brief", "Let the platform AI decide", "Double the budget"],
+            answer: 1,
+            why: "A reverse brief confirms objectives, requirements and alignment with the client before work starts.",
+          },
+          {
+            q: "In the WWF media plan, which channel had the lowest planned cost per lead?",
+            options: ["Meta lead form (US$10)", "LinkedIn lead form (US$60)", "Google Search (US$8)", "LinkedIn conversation ad (US$50)"],
+            answer: 2,
+            why: "Google Search was planned at US$8 per lead, against US$10 on Meta and US$60 on LinkedIn.",
+          },
+          {
+            q: "Why didn't the agency put the whole lead budget on Meta, which is cheaper than LinkedIn?",
+            options: [
+              "Meta does not allow lead forms",
+              "Meta leads can be less qualified, so it A/B tests both first",
+              "LinkedIn gives free impressions",
+              "The client banned Meta",
+            ],
+            answer: 1,
+            why: "US$3k goes to each platform first; the remaining budget moves to whichever gives better leads.",
+          },
+          {
+            q: "What was the creative line of the WWF campaign?",
+            options: ["Together Possible", "Purpose is ours to create", "Change the world at work", "Give more, live more"],
+            answer: 1,
+            why: "“Purpose is ours to create”, under the direction “Together we lead with purpose”.",
+          },
+          {
+            q: "Which of these belongs in a brief written for the AI era?",
+            options: [
+              "Only the creative mood board",
+              "First-party data and conversion signals, plus a measurement plan",
+              "The agency's office address",
+              "A list of banned colours",
+            ],
+            answer: 1,
+            why: "AI buying tools need good data signals, and the team needs a plan to prove real impact.",
+          },
+          {
+            q: "What share of B2B buyers use AI chatbots during their buying journey (Forrester, 2026)?",
+            options: ["14%", "43%", "71%", "94%"],
+            answer: 3,
+            why: "94%: generative AI search is now where B2B research starts, so brands must be findable in AI answers.",
+          },
+        ],
+      },
+    ],
   },
+
+  {
+    id: "guest-yp",
+    status: "done",
+    guest: true,
+    short: "Guest · Yellow Pages",
+    number: "Guest session",
+    date: "30 Oct 2026",
+    title: "Building an AI Marketing Team: a Lite Agentic Workflow with Claude",
+    speakers: [
+      { name: "Nick Goh", role: "CEO, INSPIRO Consulting · CMO, Yellow Pages Singapore · Marketing Lead, YP Academy" },
+    ],
+    lead:
+      "Nick Goh showed how he built a small “AI marketing team” of Claude agents that takes a fictional Louis Vuitton bag launch, “Terra”, from an email brief all the way to scored Instagram creatives, and why building an AI team is a people problem, not a tool problem.",
+    stats: [
+      { value: "~8%", label: "of CMOs run campaigns with connected AI agents, while 96% say they transform with AI (BCG)" },
+      { value: "15.3%", label: "of marketing budgets go to AI, but only 30% have the skills to scale it (Gartner)" },
+      { value: "86% vs 37%", label: "Singapore workers using AI at work vs trained in the past year" },
+      { value: "67%", label: "of AI impact comes from culture, managers and talent practices" },
+    ],
+    takeaways: [
+      {
+        title: "A people problem, not a tool problem",
+        points: [
+          "He opened with industry headlines: companies cutting jobs as investment shifts to AI, and WPP folding Ogilvy, VML and AKQA into a single creative brand.",
+          "Most marketers still use GenAI as a task helper; the gap is training and processes, not access to tools.",
+          "Culture, managers and talent practices explain 67% of the impact people get from AI; individual skills only 32%.",
+        ],
+      },
+      {
+        title: "Six agents in two teams",
+        points: [
+          "Planning team: Brief Writer (drafts the brief from the project context: goal, audience, budget, timing), Brief Validator (critiques it in a fresh chat and gives a verdict + top fixes), Strategist (turns the validated brief into a Big Idea one-pager).",
+          "Production team: Designer / Art Director (key visuals through connectors such as Higgsfield), Copywriter (messaging hierarchy, adapted per channel), Reviewer (checks brand voice and sign-off).",
+          "Each agent is a Claude skill inside one project (“LVMH AI Marketing Team”) that shares a knowledge base.",
+          "An email trigger: a scheduled task checks Gmail every day for a “Marketing Brief” email and drafts the brief automatically.",
+        ],
+      },
+      {
+        title: "The handoff chain, with a human in the middle",
+        points: [
+          "1 Brief Writer → 2 Brief Validator (new chat, fresh eyes) → 3 Strategist → 4 You approve and save to the knowledge base → 5 Designer + Copywriter → 6 Reviewer.",
+          "Demo: brief → revised brief → research & strategy foundation → messaging hierarchy (Big Idea: “Nothing to explain.”) → key-visual concepts → images in Higgsfield → Instagram story and post.",
+          "The human step is the approval: nothing moves to production until a person signs off the strategy.",
+        ],
+      },
+      {
+        title: "The Creative Score: polished ≠ good",
+        points: [
+          "A “Creative Review Scorer” skill grades the work the way BBH, Ogilvy and McCann would, against the brief and the research.",
+          "The Instagram story scored 5.7/10 and the feed post 4.3/10: a generic luxury desert scene, a bag that didn't match the Terra product, and placeholders left in the caption.",
+          "A new close-up of a hand on the bag's clasp scored higher (6.7/10): craft is visible, no claim or caption needed.",
+          "Lesson: AI makes work look finished fast, but the judgement on what is distinctive stays human, and an honest reviewer agent helps.",
+        ],
+      },
+      {
+        title: "How to build the team (Session 4 slides)",
+        points: [
+          "Hub + spokes: governance, data and risk in a central hub; AI skills embedded in every marketing team. 75% of CMOs are moving to small pods built around goals or customer segments, not channels.",
+          "New roles: AI product owner, AI governance owner, GEO/AEO specialist, marketing science; everyone becomes an “agent boss” who builds, delegates to and reviews agents.",
+          "Most-needed skills: checking AI output (50%) and critical thinking (46%).",
+          "6-step roadmap: map the work → group it into agent jobs → redesign the workflow (don't bolt AI on) → start small and roll out in waves → upskill and govern → measure from day one.",
+        ],
+      },
+    ],
+    reflection:
+      "This session felt very close to how I built this site. The idea I will reuse is the Brief Validator working in a fresh chat: an agent that checks its own work misses things, while a separate reviewer with fresh eyes catches the gaps. The low creative scores were the most honest part of the demo: the visuals looked expensive but were generic, which shows that AI speeds up production while the human still decides what is good enough. For our group project, we could copy the chain brief → validator → strategist, with the team approving each handoff.",
+    games: [
+      {
+        type: "order",
+        title: "Rebuild the handoff chain",
+        intro: "Put the six steps of Nick Goh's AI marketing team in the right order.",
+        steps: [
+          "Brief Writer drafts the brief from the project context",
+          "Brief Validator critiques it in a new chat, with fresh eyes",
+          "Strategist turns the validated brief into the Big Idea",
+          "You approve it and save it to the knowledge base",
+          "Designer + Copywriter create the key visuals and channel messaging",
+          "Reviewer checks the work against the brand voice and the brief",
+        ],
+      },
+      {
+        type: "quiz",
+        title: "Building an AI marketing team",
+        intro: "Six questions on the guest session.",
+        questions: [
+          {
+            q: "Why does the Brief Validator work in a new chat?",
+            options: [
+              "To save money on tokens",
+              "So it is not biased by the writer's context and sees the brief with fresh eyes",
+              "Because skills cannot share a chat",
+              "To hide the brief from the client",
+            ],
+            answer: 1,
+            why: "A separate reviewer catches gaps that the agent that wrote the brief would miss.",
+          },
+          {
+            q: "What explains most of the impact people get from AI?",
+            options: ["The choice of AI model", "Individual prompting skills", "Culture, managers and talent practices", "The size of the AI budget"],
+            answer: 2,
+            why: "67% comes from culture, managers and talent practices, against 32% from individual skills.",
+          },
+          {
+            q: "Roughly what share of CMOs run campaigns with connected AI agents?",
+            options: ["About 8%", "About 30%", "About 60%", "About 96%"],
+            answer: 0,
+            why: "96% say they are transforming with AI, but only about 8% run campaigns with connected agents.",
+          },
+          {
+            q: "Why did the Instagram feed post score only 4.3/10?",
+            options: [
+              "The image was low resolution",
+              "It was generic, the bag didn't match the product and placeholders were left",
+              "It was too long",
+              "It had no hashtags",
+            ],
+            answer: 1,
+            why: "Polished but generic: a luxury-in-the-desert image that could sell any bag, with unfinished caption details.",
+          },
+          {
+            q: "Where does the human sit in the handoff chain?",
+            options: [
+              "Nowhere, it is fully automated",
+              "Only at the very end",
+              "In the middle: approving the strategy before production starts",
+              "Only writing the first email",
+            ],
+            answer: 2,
+            why: "Step 4: you approve and save to the knowledge base before the production team starts.",
+          },
+          {
+            q: "Which skill tops the list for marketers working with AI?",
+            options: ["Coding", "Checking AI output", "Video editing", "Public speaking"],
+            answer: 1,
+            why: "Checking AI output (50%) comes first, followed by critical thinking (46%).",
+          },
+        ],
+      },
+    ],
+  },
+
+  /* ---------------- Upcoming sessions (from the syllabus) ---------------- */
   {
     id: "session-5",
     status: "upcoming",
@@ -607,7 +1012,7 @@ function renderHome() {
       el("div", { class: "card" },
         el("h3", {}, "Guest speakers & partners this term"),
         el("p", { style: "color:var(--muted);margin:0" },
-          "LaunchLab (Yibo, Nirvan, Rishabh) · CPXi Asia · Mujo AI · Cape.io · Media Publishares · M&C Saatchi Performance · platform partners Google, YouTube, TikTok, Pinterest, Meta and LinkedIn.")
+          "LaunchLab (Yibo, Nirvan, Rishabh) · Nick Goh (Yellow Pages Singapore & YP Academy) · CPXi Asia · Mujo AI · Cape.io · Media Publishares · M&C Saatchi Performance · platform partners Google, YouTube, TikTok, Pinterest, Meta and LinkedIn.")
       )
     )
   );
