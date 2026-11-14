@@ -856,16 +856,214 @@ const SESSIONS = [
     ],
   },
 
-  /* ---------------- Upcoming sessions (from the syllabus) ---------------- */
   {
     id: "session-5",
-    status: "upcoming",
+    status: "done",
     guest: true,
-    short: "S5 · LinkedIn",
+    short: "S5 · Audiences & LinkedIn",
     number: "Session 5",
-    title: "Maximising LinkedIn for B2B Marketing",
-    lead: "Ad formats, targeting, lead generation, thought leadership and community building.",
+    date: "13 Nov 2026",
+    title: "Audience Insights, Investment Principles & LinkedIn in the Era of LLMs",
+    speakers: [
+      { name: "Madina Kalyayeva", role: "Lecturer" },
+      { name: "Cindy Leong", role: "Head of Scaled Agency Development, APAC · LinkedIn" },
+    ],
+    lead:
+      "How a media planner goes from the brief to the plan: understanding the audience (insights vs size), the free and paid tools to do it, what AI changes in research and audience sizing, and the principles behind investment decisions. Then a guest session with LinkedIn on moving from SEO to GEO.",
+    stats: [
+      { value: "1B+", label: "LinkedIn members worldwide, incl. executives from every Fortune 500 company" },
+      { value: "300 / 50k+", label: "LinkedIn audience: minimum to serve / recommended size" },
+      { value: "30 → 3 days", label: "Aveeno's strategy brief with synthetic audiences" },
+      { value: "10–20%", label: "max share of synthetic respondents in a sample" },
+    ],
+    takeaways: [
+      {
+        title: "From brief to media plan",
+        points: [
+          "Campaign lifecycle: brief clarified with marketing → content and media teams research in parallel → align on an upfront strategy → content strategy and media strategy → content produced and media plan built → campaign goes live.",
+          "Media strategy = the high-level HOW, WHERE and WHEN to reach the right audience. Media plan = the tactical execution: specific channels, budget split and timing.",
+          "Stages of media planning: business context → audience insights → channel decisioning → investment decisioning → measurement plan → media plan.",
+          "Planners face a changing landscape, budget limits, stakeholder priorities, finding the audience, platform fragmentation and attribution. Planning is also about giving stakeholders confidence through educated decisions.",
+        ],
+      },
+      {
+        title: "Audience insights vs audience size",
+        points: [
+          "Insights are qualitative (who they are, what they do): research tools like GWI, Nielsen, Semrush, Meltwater, plus site analytics (GA4, Adobe Analytics).",
+          "Size is quantitative (how many you can reach): taken from the platforms where you buy (Meta, DV360, TikTok, LinkedIn, Google Keyword Planner).",
+          "Good audience understanding minimises media wastage: ads shown to people outside the target, which lowers results and ROI.",
+          "No budget for paid tools? Google Trends, Think with Google, TikTok Creative Center, Meta Foresight (ex-Facebook IQ), Reddit and LLMs. Ask: online behaviours, channels, how they research, what drives purchase, content, interests, attitudes to brands, similar case studies.",
+        ],
+      },
+      {
+        title: "AI in audience research and sizing",
+        points: [
+          "Deep research agents (ChatGPT, Gemini, Perplexity) draft an audience brief in minutes, but always check their sources. GWI Spark, Meltwater Mira and Nielsen Ad Intel AI add AI inside the tools.",
+          "Synthetic audiences (Simile, Aaru, Evidenza) answer surveys in hours, but Pew found AI twins flattened opinions (98% vs 42% on one question) and Strat7 found willingness-to-pay 16% too high.",
+          "Rule: use AI to explore and form hypotheses, then validate with real data; cap synthetic respondents at 10–20% of a sample.",
+          "With Meta Advantage+, age and interests are only suggestions, so the estimate is the broad reachable pool. TikTok counts accounts that saw ads in 30 days, not people. So what: size the market with research tools, the reachable audience with platforms, and let the AI find people inside it.",
+        ],
+      },
+      {
+        title: "Audience mining, step by step",
+        points: [
+          "1 Identify the target audience (from the client or a reverse brief) → 2 define it in market insight tools → 3 identify key behaviours and insights → 4 define it on the media buying platforms → 5 identify audience sizes and the budget needed.",
+          "Example with free tools: use an LLM to synthesise third-party research, check the platform's ad tool for addressable size, then look at real conversations (e.g. makeup tutorials, “natural looks”) to find messaging points.",
+        ],
+      },
+      {
+        title: "Media investment principles",
+        points: [
+          "Four principles for any objective: annual ROI & sustained profitability, customer quality, design to learn, long-term incrementality.",
+          "ROI = (profit − ad spend) / ad spend, tracked across 12 months, not only per campaign.",
+          "Customer quality: acquiring a customer is an investment. A low CAC means little if the customer only buys on discount or switches brands.",
+          "Four customer types by satisfaction × profitability: Star customers, Free riders, Vulnerable customers, Lost causes. Class case: which Sephora shopper to prioritise?",
+        ],
+      },
+      {
+        title: "Guest: LinkedIn, from SEO to GEO",
+        points: [
+          "Cindy Leong leads LinkedIn's Scaled Agency team in APAC, helping independent agencies build skills and drive results for their clients.",
+          "LinkedIn: 1B+ members, the world's largest professional network; revenue from Talent, Marketing and Sales Solutions and Premium subscriptions.",
+          "Theme: how B2B brands stay visible when buyers search through LLMs, moving from SEO to GEO, plus LinkedIn's programmes and resources for agencies.",
+        ],
+      },
+    ],
+    reflection:
+      "The idea I take away is the difference between the market and the reachable audience. Research tools tell me who the customer is; the platform tells me how many I can reach; and with Advantage+ or Smart+ the algorithm decides who inside that pool actually sees the ad. The Sephora discussion also changed how I see a “good” customer: the cheapest one to acquire is not the best one if she only buys on promotion. For our group project, I want to use AI to build audience hypotheses quickly, but check them against real platform data before putting budget behind them.",
+    games: [
+      {
+        type: "order",
+        title: "The stages of media planning",
+        intro: "Put the six stages of media planning in the right order, from the brief to the plan.",
+        steps: [
+          "Business context",
+          "Audience insights",
+          "Channel decisioning",
+          "Investment decisioning",
+          "Measurement plan",
+          "Media plan",
+        ],
+      },
+      {
+        type: "sort",
+        title: "What kind of customer?",
+        intro: "Customer quality = satisfaction × profitability. Tap a description, then tap the customer type.",
+        buckets: [
+          { id: "star", name: "Star customers", desc: "High value both ways" },
+          { id: "free", name: "Free riders", desc: "Happy, not profitable" },
+          { id: "vuln", name: "Vulnerable", desc: "Profitable, not happy" },
+          { id: "lost", name: "Lost causes", desc: "Low value both ways" },
+        ],
+        items: [
+          { label: "Receives high value from the brand and delivers high value to it", bucket: "star" },
+          { label: "Shops several times a year at full price and is a loyalty member", bucket: "star" },
+          { label: "Takes every offer, discount and promotion, but brings little profit", bucket: "free" },
+          { label: "Loves free samples and birthday gifts, waits for a deal before buying", bucket: "free" },
+          { label: "Highly valuable to the company but receives little value in return", bucket: "vuln" },
+          { label: "Spends a lot but is unhappy and could switch to a competitor", bucket: "vuln" },
+          { label: "Gets little value from the product and gives little profit back", bucket: "lost" },
+          { label: "Bought once on a deep discount, never engaged again", bucket: "lost" },
+        ],
+      },
+      {
+        type: "sort",
+        title: "Insight or size?",
+        intro: "Does this tool mainly give you qualitative audience insights, or the size of the audience you can buy?",
+        buckets: [
+          { id: "ins", name: "Audience insights", desc: "Qualitative: who they are" },
+          { id: "size", name: "Audience size", desc: "Quantitative: how many you can reach" },
+        ],
+        items: [
+          { label: "GWI", bucket: "ins" },
+          { label: "Nielsen", bucket: "ins" },
+          { label: "Google Analytics 4", bucket: "ins" },
+          { label: "Google Trends", bucket: "ins" },
+          { label: "Reddit threads (r/SkincareAddiction)", bucket: "ins" },
+          { label: "Meta Business Suite reach estimate", bucket: "size" },
+          { label: "LinkedIn Campaign Manager forecasting", bucket: "size" },
+          { label: "TikTok Ads Manager Audience Insights", bucket: "size" },
+          { label: "Google Ads keyword forecast", bucket: "size" },
+        ],
+      },
+      {
+        type: "quiz",
+        title: "Audiences, AI & investment",
+        intro: "Seven questions on Session 5.",
+        questions: [
+          {
+            q: "What is the difference between a media strategy and a media plan?",
+            options: [
+              "There is none",
+              "Strategy = how, where and when to reach the audience; plan = specific channels, budget and timing",
+              "Strategy = the budget; plan = the creative",
+              "Strategy is for organic, plan is for paid",
+            ],
+            answer: 1,
+            why: "The strategy is the high-level approach; the plan is its tactical execution.",
+          },
+          {
+            q: "What is “media wastage”?",
+            options: [
+              "Ads that are never approved",
+              "Unspent budget at the end of the year",
+              "Media exposure beyond the desired audience",
+              "Creative that is never used",
+            ],
+            answer: 2,
+            why: "Reaching people outside the target lowers results and ROI, which is why audience understanding matters.",
+          },
+          {
+            q: "Where is the best place to get the size of an addressable audience?",
+            options: [
+              "GWI or Nielsen",
+              "The DSP or platform where the media will be bought",
+              "A synthetic audience panel",
+              "The client's annual report",
+            ],
+            answer: 1,
+            why: "Research tools give insights; the buying platforms (Meta, DV360, TikTok, LinkedIn) give addressable sizes.",
+          },
+          {
+            q: "On LinkedIn Campaign Manager, what audience size is recommended?",
+            options: ["At least 300", "At least 5,000", "50,000 or more", "1 million or more"],
+            answer: 2,
+            why: "300 is the minimum to serve, but 50,000+ is recommended. Location must be set first.",
+          },
+          {
+            q: "How should synthetic (AI) respondents be used in research?",
+            options: [
+              "Replace all real surveys",
+              "Explore hypotheses fast, validate with real data, max 10–20% of a sample",
+              "Only for B2B brands",
+              "Never, they are banned",
+            ],
+            answer: 1,
+            why: "Studies found AI twins flatten opinions and overestimate willingness-to-pay, so they complement real data.",
+          },
+          {
+            q: "Which formula did the slides use for ROI?",
+            options: [
+              "Revenue / impressions",
+              "(Profit − ad spend) / ad spend",
+              "Clicks / ad spend",
+              "Ad spend / profit",
+            ],
+            answer: 1,
+            why: "Measured over the year, to balance short-term performance with sustained profitability.",
+          },
+          {
+            q: "A Sephora shopper buys bestsellers at full price several times a year and is a loyalty member. Which type is she?",
+            options: ["Free rider", "Lost cause", "Star customer", "Vulnerable customer"],
+            answer: 2,
+            why: "She gets high value from Sephora and delivers high value back: a star customer worth prioritising.",
+          },
+        ],
+      },
+    ],
   },
+
+  /* ---------------- Upcoming sessions (from the syllabus) ---------------- */
   {
     id: "session-6",
     status: "upcoming",
@@ -1012,7 +1210,7 @@ function renderHome() {
       el("div", { class: "card" },
         el("h3", {}, "Guest speakers & partners this term"),
         el("p", { style: "color:var(--muted);margin:0" },
-          "LaunchLab (Yibo, Nirvan, Rishabh) · Nick Goh (Yellow Pages Singapore & YP Academy) · CPXi Asia · Mujo AI · Cape.io · Media Publishares · M&C Saatchi Performance · platform partners Google, YouTube, TikTok, Pinterest, Meta and LinkedIn.")
+          "LaunchLab (Yibo, Nirvan, Rishabh) · Nick Goh (Yellow Pages Singapore & YP Academy) · Cindy Leong (LinkedIn) · CPXi Asia · Mujo AI · Cape.io · Media Publishares · M&C Saatchi Performance · platform partners Google, YouTube, TikTok, Pinterest, Meta and LinkedIn.")
       )
     )
   );
